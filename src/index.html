@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Site Title -->
+    <title>CoffeeShop Menu Manager</title>
+
+    <!-- Style Reset -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>CoffeeShop Menu Manager</h1>
+        <button class="btn btn--new-product" id="new-offer">Add NEW</button>
+    </header>
+    <!-- Menu Cards Section -->
+    <section class="coffee-menu">
+        <div class="coffee-menu__item">
+            <img src="assets/images/coffee_1.jpg" alt="">
+            <h2 class="title">Caffee Latte</h2>
+            <h3 class="price">1.25 €</h3>
+            <button onclick="deleteFromMenu(this)" class="btn btn--discard-offer">Remove from MENU</button>
+        </div>
+        <div class="coffee-menu__item">
+            <img src="assets/images/coffee_2.jpeg" alt="">
+            <h2 class="title">Cappuccino</h2>
+            <h3 class="price">1.75 €</h3>
+            <button onclick="deleteFromMenu(this)" class="btn btn--discard-offer">Remove from MENU</button>
+        </div>
+        <div class="coffee-menu__item">
+            <img src="assets/images/coffee_3.jpeg" alt="">
+            <h2 class="title">Black Coffee</h2>
+            <h3 class="price">1.00 €</h3>
+            <button onclick="deleteFromMenu(this)" class="btn btn--discard-offer">Remove from MENU</button>
+        </div>
+        <div class="coffee-menu__item">
+            <img src="assets/images/coffee_4.jpg" alt="">
+            <h2 class="title">Latte Macciato</h2>
+            <h3 class="price">2.0 €</h3>
+            <button onclick="deleteFromMenu(this)" class="btn btn--discard-offer">Remove from MENU</button>
+        </div>
+        <div class="coffee-menu__item">
+            <img src="assets/images/coffee_5.jpeg" alt="">
+            <h2 class="title">Espresso</h2>
+            <h3 class="price">1.00 €</h3>
+            <button onclick="deleteFromMenu(this)" class="btn btn--discard-offer">Remove from MENU</button>
+        </div>
+        <div class="coffee-menu__item">
+            <img src="assets/images/coffee_6.jpg" alt="">
+            <h2 class="title">Flat White</h2>
+            <h3 class="price">2.0 €</h3>
+            <button onclick="deleteFromMenu(this)" class="btn btn--discard-offer">Remove from MENU</button>
+        </div>
+    </section>
+
+    <!-- New Offer Pop-Up -->
+    <section class="new-offer__window">
+        <div class="new-offer__window__content">
+            <button class="btn btn--discard-offer" id="discard-offer">Discard</button>
+            <form>
+                <label for="coffee-image">Upload Picture</label>
+                <input type="file" name="coffee-image" id="coffee-image" accept="image/*" placeholder="Image" required>
+                <label for="coffee-name">Coffee Name</label>
+                <input type="text" name="coffee-name" id="coffee-name" placeholder="Enter here..." required>
+                <label for="coffee-price">Coffee Price</label>
+                <input type="number" name="Coffee Price" id="coffee-price" placeholder="Enter here..." required>
+                <input type="submit" id="add-new-coffee" class="btn btn--new-product" value="Add">
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function deleteFromMenu(e) {
+            e.parentNode.parentNode.removeChild(e.parentNode);
+        }
+    </script>
+        
+    <!-- Main JavaScript -->
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>
